@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Movie List</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Users\shine\Desktop\alpha\movieList_v2\favorite.html">Favorite</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!--mt-5(margin 5)-->
+    <div class="container mt-5">
+        <!--search bar-->
+        <form class="row row-cols-lg-auto g-3 align-items-center mb-2" id="search-form">
+            <div>
+                <label class="visually-hidden" for="search-input">
+                    Search Keyword
+                </label>
+                <input type="text" class="form-control" id="search-input" placeholder="Keyword..." />
+            </div>
+            
+            <div>
+                <button type="submit" class="btn btn-primary" id="search-submit-button">
+                    Search
+                </button>
+            </div>
+            <div id="displayType">
+                <i class="fa-solid fa-table-cells" style="font-size: 2em; color: #0d6efd; margin: 7px; cursor: auto;"></i>
+                
+                <i class="fa-solid fa-bars" style="font-size: 2em; color: #565656; margin: 7px; cursor: pointer;"></i>
+                
+            </div>
+            
+        </form>
+        
+
+
+        <div class="row" id="data-panel">
+            <!-- Render Movie List-->
+        </div>
+
+        <div id="data-panel-list">
+            <!-- Render Movie List-->
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="movie1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="movie-modal-body">
+                   <div class="row">
+                    <div class="col-sm-8" id="movie-modal-image">
+                        <img src="https://webdev.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg" alt="movie-poster" class="image-fuid">
+                    </div>
+                
+                    <div class="col-sm-4">
+                        <p><em id="movie-modal-date">release date: 2020/05/02</em></p>
+                        <p id="movie-modal-description">this is a mocie.</p>
+                    </div>
+                   </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Pagination-->
+    <nav aria-label="...">
+        <ul class="pagination pagination-sm justify-content-center" id="paginator">
+            
+        </ul>
+    </nav>
+
+    <!--引用axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <!--引用bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--引用fontawesome-->
+    <script src="https://kit.fontawesome.com/c071043f66.js" crossorigin="anonymous"></script>
+    
+    <!--引用自己的js-->
+    <script src="main.js"></script>
+</body>
+</html>
